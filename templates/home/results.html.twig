@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Résultats{% endblock title %}
+
+{% block body %}
+    {% for gite in gites %}
+        {{ include("partials/_gite.html.twig") }}
+    {% endfor %}    
+{% endblock body %}

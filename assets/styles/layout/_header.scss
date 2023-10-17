@@ -1,0 +1,20 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+    h2 {
+        padding: 10px;
+        border: 2px solid rgb(80, 80, 150);
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+    .logo {
+        width: 250px;
+        height: 100px;
+    }
+}
+

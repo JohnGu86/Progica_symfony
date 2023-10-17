@@ -6,4 +6,4 @@
 Site de location de gîtes entre particulier
 
 ## Stack
-https://symfony.com/logos/symfony_black_02.png  
+* <img src="https://symfony.com/logos/symfony_black_02.png">

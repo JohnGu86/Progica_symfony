@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid rgb(80, 80, 150);
+    border-radius: 5px;
+    margin: 15px;
+
+    label {
+        padding: 0 10px;
+    }
+
+    button {
+        margin-left: 15px;
+        align-items: center;
+    }
+
+    #search_region {
+        margin: 15px;
+    }
+
+    #search_departement {
+        margin: 15px;
+    }
+
+    #search_ville {
+        margin: 15px;
+    }
+
+}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Progica{% endblock %}
+
+{% block body %}
+
+{{include("partials/_search.html.twig")}}
+
+<div class="gites">
+    {% for gite in gites %}
+        {{ include("partials/_gite.html.twig") }}
+    {% endfor %}
+</div>
+
+
+{% endblock %}

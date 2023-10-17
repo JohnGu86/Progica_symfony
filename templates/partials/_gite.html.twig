@@ -1,0 +1,12 @@
+
+<div class="gites">
+    <div class="gite">
+        <a href="{{path('gite', {nom: gite.nom})}}"><img src="{{gite.image}}" alt="image"></a>
+        <div class="gite-nom">{{gite.nom}}</div>
+        <div class="gite-lieu">{{gite.ville.nom}}, {{gite.ville.departement.region.nom}}</div>
+        <div class="gite-infos">{{gite.surface}} m², {{gite.nbChambres}} chambres, {{gite.nbLits}} couchages</div>
+        <div class="gite-date">Du {{gite.prix.debut | date("d/m/Y")}} au {{gite.prix.fin | date("d/m/Y")}}</div>
+        <div class="prix">A partir de {{gite.prix}} euros / semaine</div>
+    
+    </div>
+</div>

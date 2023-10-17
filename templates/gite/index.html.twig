@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{gite}}{% endblock %}
+
+{% block body %}
+    <div class="gite-card">
+        <div class="infos">
+            <div class="gite-nom">{{gite.nom}}</div>
+            <div class="gite-lieu">{{gite.ville.nom}}, {{gite.ville.departement}}, {{gite.ville.departement.region.nom}}</div>
+            <img src="{{gite.image}}" alt="image">
+        </div>
+        <div class="details">
+            <ul>
+                <li>Surface : {{gite.surface}} m²</li>
+                <li>Nombre de chambres : {{gite.nbChambres}}</li>
+                <li>Nombre de couchages : {{gite.nbLits}}</li>
+                {% if gite.equipementInterieur | length %}
+                    <li>Equipements intérieur:
+                        <ul>
+                            {% for equipementInterieur in gite.equipementInterieur %}
+                                <li>{{equipementInterieur.description}}</li>
+                            {% endfor %}
+                        </ul>
+                {% endif %}
+                </li>
+                {% if gite.equipementExterieur | length %}
+                    <li>Equipements extérieur:
+                        <ul>
+                            {% for equipementExterieur in gite.equipementExterieur %}
+                                <li>{{equipementExterieur.description}}</li>
+                            {% endfor %}
+                        </ul>
+                </li>
+                {% endif %}
+                {% if gite.service | length %}
+                    <li>Services:
+                        <ul>
+                            {% for service in gite.service %}
+                                <li>{{service}}</li>
+                            {% endfor %}
+                        </ul>
+                {% endif %}
+                </li>
+                <li>Animaux acceptés :
+                    {% if gite.acceptAnimaux == true %} Oui
+                        <ul>
+                            <li> Tarif : {{gite.tarifAnimaux}} euros</li>
+                        </ul>
+                    {% else %}
+                        Non
+                    {% endif %}
+                </li>
+                <li>Disponibilité : du {{gite.prix.debut | date("d/m/Y")}} au {{gite.prix.fin | date("d/m/Y")}}</li>
+                <li>Prix : à partir de {{gite.prix}} euros / semaine</li>
+                <li>Personne à contacter pour toute réservation: {{gite.contact.prenom}} {{gite.contact.nom}} au {{gite.contact.telephone}}</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

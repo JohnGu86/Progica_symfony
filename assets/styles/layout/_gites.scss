@@ -1,0 +1,31 @@
+/* Gite  */
+.gites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+    
+    .gite {
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    
+        &-nom {
+            font-size: 20px;
+        }
+    }
+    
+    img {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+        transition: transform 0.4s;
+    }
+    
+    img:hover {
+        transform: scale(1.1);
+    }
+}
+
